@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>GNU Songanizer Home Page - GNU Project - Free Software Foundation (FSF)</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="songanizer_files/gnu.css"/>
+  <link rev="made" href="mailto:webmasters@gnu.org"/>
+</head>
+
+<body>
+
+<table border="0" cellpadding="2" cellspacing="0">
+<tr>
+<td valign="top">
+
+<h2>GNU Songanizer</h2>
+
+<p>
+<a href="http://www.gnu.org/graphics/listen.html"><img alt=" [Listening Gnu by the Nevrax Design Team]" height="130" width="213" src="songanizer_files/listen-tiny.jpg" /></a>
+</p>
+
+<hr/>
+
+<h3>
+  <a href="#TOCintroduction" id="introduction">Introduction</a>
+</h3>
+
+<p>
+  GNU Songanizer is a shell script to organize a directory containing a collection
+  of Ogg Vorbis and MP3 files. The goal is to create virtual directory structures,
+  which give different views of the data, but without having redundant copies of
+  the files themselves.
+</p><p>
+  The files are organized according to information gathered from the tags of files
+  stored in subdirectories located under the 'base' directory, which bear the
+  prefix _data in their name. Parallel virtual directory structures containing
+  symbolic links to the actual files are created, which give different views of
+  the same data. Each virtual directory stucture gives a view based on a
+  particular attribute specified by the user. The _data directories themselves can
+  be symbolic links to directories on other devices, and can have multiple levels
+  of sub-directories within them holding the actual song files.
+</p><p>
+  After songanization, the BASE directory contains the following directories:
+  <br />  (i) _data*   --> All directories starting with _data contain the real data.
+  <br /> (ii) _artist  --> Contains the link structure on the basis of the artist tag.
+  <br />(iii) _genre   --> Contains the link structure on the basis of the genre tag.
+  <br /> (iv) _initial --> Contains the link structure on the basis of the initial.
+  <br />... and more, depending on the switches passed to the script.
+</p>
+
+<h3>
+  <a href="#TOCresources" id="resources">Resources</a>
+</h3>
+
+<p>
+  Since GNU Songanizer is a shell script, a running shell is the first and foremost
+  requirement. Preferably it should be a Bourne Again SHell. You may report
+  problems encountered on any shell to us.
+</p><p>
+  Getopt (enhanced) is needed to extract the options from the command line
+  arguments. Alongwith that you should have gettext for internationalization
+  support.
+</p><p>
+  The <a href="http://ibiblio.org/mp3info/">mp3info</a> tool should be installed 
+  in the system to process the file tags.
+</p>
+
+<h3>
+  <a href="#TOCreleases" id="releases">Releases</a>
+</h3>
+
+<p>
+<table border="1" cellspacing="0" cellpadding="2">
+<tr><td>Version</td><td align="center">Date</td><td align="center">Comments</td></tr>
+<tr><td align="center">0.8</td><td>2005-11-05</td><td>Changed the virtual directory structure creation algorithm. The structure for every option passed to songanizer is first created in a temporary directory. On completion of this heavy task, in a short operation, the structure is moved to its desired location.<br />
+						      Added the --all switch.<br />
+						      Changed the --initial switch to --initials.<br />
+						      Replaced ls with find. Data directories can have multiple levels of subdirectoies within them.<br />
+						      Now links point to individual files instead of directories.<br />
+						      Created an online manual page.</td></tr>
+<tr><td align="center">0.7</td><td>2004-02-01</td><td>gettext support for i18n was added.</td></tr>
+<tr><td align="center">0.6</td><td>2004-01-24</td><td>Added long options support.</td></tr>
+<tr><td align="center">0.5</td><td>2003-08-22</td><td>Fixed problems caused by an album occurring in more than one data directory.</td></tr>
+<tr><td align="center">0.4</td><td>2003-08-17</td><td>Added support for multiple data directories.</td></tr>
+<tr><td align="center">0.3</td><td>2003-07-16</td><td>Initial build.<br />
+						      Translated all texts into english.</td></tr>
+<tr><td align="center">0.2</td><td>2002-12-10</td><td>Created generic function organizeOnBaseOfTag().</td></tr>
+<tr><td align="center">0.1</td><td>2002-11-01</td><td>Started the project.</td></tr>
+</table>
+</p>
+
+<h3>
+  <a href="#TOClists" id="lists">Mailing Lists</a>
+</h3>
+
+<p>
+  GNU Songanizer now has two mailing lists: 
+  <a href="mailto:help-songanizer@gnu.org">&lt;help-songanizer@gnu.org&gt;</a> and 
+  <a href="mailto:bug-songanizer@gnu.org">&lt;bug-songanizer@gnu.org&gt;</a>.
+</p>
+
+<p>
+  The main discussion list is 
+  <a href="mailto:help-songanizer@gnu.org">&lt;help-songanizer@gnu.org&gt;</a>,
+  and is used to discuss all aspects of GNU Songanizer, including development and
+  porting.
+</p>
+
+<p>
+  Announcements about GNU Songanizer and most other GNU Software are made on
+  <a href="mailto:info-gnu@gnu.org">&lt;info-gnu@gnu.org&gt;</a>.
+</p>
+
+<p>
+  There is also a special list used for reporting bugs, 
+  <a href="mailto:bug-songanizer@gnu.org">&lt;bug-songanizer@gnu.org&gt;</a>.   
+</p>
+
+<p>
+  To subscribe to any GNU Songanizer mailing list, please send an empty mail with
+  a Subject: header line of just "subscribe" to the relevant -request list. 
+  For example, to subscribe yourself to the main list, you would send mail to 
+  <a href="mailto:help-songanizer-request@gnu.org">&lt;help-songanizer-request@gnu.org&gt;</a>
+  with no body and a Subject: header line of just "subscribe".
+</p>
+
+<h3>
+  <a href="#TOCcontributors" id="contributors">Contributors</a>
+</h3>
+
+<p>
+<table border="1" cellspacing="0" cellpadding="2">
+<tr><td align="center">From</td><td align="center">Name</td><td align="center">Status</td><td align="center">Activity</td></tr>
+<tr><td>June 2003</td><td>Patrick Ohnewein</td><td>Author</td><td>Started the project. Wrote the initial version of most of the files.</td></tr>
+<tr><td>August 2003</td><td>Benjamin Gufler</td><td>Contributor</td><td>Helped with the ID3 tags.</td></tr>
+<tr><td>July 2004</td><td>Juergen Kofler</td><td>Contributor</td><td>Wrote a Python implementation.</td></tr>
+<tr><td>September 2005</td><td>Debarshi Ray</td><td>Maintainer</td><td>Day to day maintenance of the project. Primarily responsible for most of the releases after version 0.7.</td></tr>
+</tr>
+</table>
+</p>
+
+<h3>
+  <a href="#TOCacknowledgement" id="acknowledgement">Acknowledgement</a>
+</h3>
+
+<p>
+There have been a lot of people who have contributed towards the development of
+the project in ways other than contribution of code/text. The authors would like
+to acknowledge the work done by these group of good samaritans. They include the
+GNU Project and The Savannah Project for making the development of free software,
+and particularly GNU Songanizer possible; the authors and maintainers of the
+mp3info utility Ricardo Cerqueira, and Cedric Tefft for making the job of reading
+the ID3 tags easy for us; and Massimo Bassi for his help regarding 'long options
+support'.
+</p><p>
+A special note of thanks is due to Lokesh Nyati for helping with the development
+of the project home page; Arjun Shankar and Rakesh Pandit for intelligent bug
+reports; and Alfred M. Szimdt for his extensive ideas about SongFS.
+</p><p>
+Apart from that we are grateful to all those who have given GNU Songanizer a
+try, and given valuable feedback in the form of bug reports and other suggestions.
+</p>
+
+</td>
+
+<td valign="top">
+  <table border="0" cellspacing="0" cellpadding="2" width="1%">
+
+  <tr><td><table cellspacing="0" width="100%">
+  <tr><td style="background-color:#FFCC00; font-size:90%;
+         border: 2px solid #EEBB11; border-bottom: 0px;" >
+  <b>About GNU Songanizer</b>
+  </td></tr>
+  <tr><td style="background-color:#EEFFBB; font-size:90%;
+         border: 2px solid #FFEE99; border-top: 0px;" >
+  <p>
+  <a href="songanizer.html#introduction">Introduction</a><br />
+  <a href="songanizer.html#resources">Resources</a><br />
+  <a href="songanizer.html#releases">Releases</a><br />
+  <a href="songanizer.html#lists">Mailing lists</a><br />
+  <a href="songanizer.html#contributors">Contributors</a><br />
+  <a href="songanizer.html#acknowledgement">Acknowledgement</a><br />
+  </p>
+  </td></tr>
+  </table></td></tr>
+
+  <tr><td><table cellspacing="0" width="100%">
+  <tr><td style="background-color:#FFCC00; font-size:90%;
+         border: 2px solid #EEBB11; border-bottom: 0px;" >
+  <b>Download</b>
+  </td></tr>
+  <tr><td style="background-color:#EEFFBB; font-size:90%;
+         border: 2px solid #FFEE99; border-top: 0px;" >
+  <p>
+  <a href="https://savannah.gnu.org/cvs/?group=songanizer">CVS</a><br />
+  <a href="ftp://ftp.gnu.org/gnu/songanizer/">FTP</a><br />
+  <a href="http://ftp.gnu.org/gnu/songanizer/">HTTP</a><br />
+  <a href="http://www.gnu.org/prep/ftp.html">Mirror sites</a><br />
+  </p>
+  </td></tr>
+  </table></td></tr>
+
+  <tr><td><table cellspacing="0" width="100%">
+  <tr><td style="background-color:#FFCC00; font-size:90%;
+         border: 2px solid #EEBB11; border-bottom: 0px;" >
+  <b>Development</b>
+  </td></tr>
+  <tr><td style="background-color:#EEFFBB; font-size:90%;
+         border: 2px solid #FFEE99; border-top: 0px;" >
+  <p>
+  <a href="development.html#todo">To do</a><br />
+  <a href="development.html#discuss">Discuss</a><br />
+  <a href="development.html#contributing">Contributing</a><br />
+  </p>
+  </td></tr>
+  </table></td></tr>
+
+  <tr><td><table cellspacing="0" width="100%">
+  <tr><td style="background-color:#FFCC00; font-size:90%;
+         border: 2px solid #EEBB11; border-bottom: 0px;" >
+  <b>Bugs</b>
+  </td></tr>
+  <tr><td style="background-color:#EEFFBB; font-size:90%;
+         border: 2px solid #FFEE99; border-top: 0px;" >
+  <p>
+  <a href="bugs.html#reporting">Reporting</a><br />
+  <a href="bugs.html#database">Bug database</a><br />
+  </p>
+  </td></tr>
+  </table></td></tr>
+
+  </table>
+  </td>
+  </tr></table>
+
+<br /><br />
+<div class="copyright">
+<p>
+Return to the <a href="http://www.gnu.org/home.html">GNU Project home page</a>.
+</p>
+
+<p>
+Please send FSF &amp; GNU inquiries to 
+<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
+There are also <a href="http://www.gnu.org/home.html#ContactInfo">other ways to contact</a> 
+the FSF.
+<br/>
+Please send broken links and other corrections (or suggestions) to
+<a href="mailto:webmasters@gnu.org"><em>webmasters@gnu.org</em></a>.
+</p>
+
+<p>
+Please see the 
+<a href="http://www.gnu.org/server/standards/README.translations.html">Translations
+README</a> for information on coordinating and submitting
+translations of this article.
+</p>
+<p>
+This copyright notice applies to the text and source code of this web site, and
+the graphics that appear on it. The listening GNU is a GPL'ed image provided by
+Nevrax Limited. The software described in this text has its own copyright notice
+and license, which can be found in the distribution itself.
+</p><p>
+Copyright (C) 2005 Debarshi Ray
+</p><p>
+Verbatim copying and distribution of this entire article are
+permitted worldwide, without royalty, in any medium, provided this
+notice, and the copyright notice, are preserved.
+</p>
+
+<p>
+Updated on $Date: 2006/01/07 15:18:49 $ by $Author: pazzo $.
+</p>
+
+</div>
+</body>
+</html>
