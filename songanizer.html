@@ -28,9 +28,8 @@
 
 <p>
   GNU Songanizer is a shell script to organize a directory containing a collection
-  of Ogg Vorbis and MP3 files. The goal is to create virtual directory structures,
-  which give different views of the data, but without having redundant copies of
-  the files themselves.
+  of MP3 files. The goal is to create virtual directory structures, which give
+  different views of the data, but without having redundant copies of the files themselves.
 </p><p>
   The files are organized according to information gathered from the tags of files
   stored in subdirectories located under the 'base' directory, which bear the
@@ -73,6 +72,18 @@
 <p>
 <table border="1" cellspacing="0" cellpadding="2">
 <tr><td>Version</td><td align="center">Date</td><td align="center">Comments</td></tr>
+<tr><td align="center">1.0</td><td>2005-07-10</td><td>Added autoconf/automake support.<br />
+                                                      The documentation was given a revamp. A lot of redundancies were resolved in the process.<br />
+                                                      Fixed a bug caused by the mv command's inability to overwrite pre-existing tag directories.<br />
+						      Changed the symbolic links from being absolute to relative.<br />
+                                                      Changed the --initials switch back to --initial.<br />
+                                                      Enhanced the error handling and reporting facilities.<br />
+                                                      Added the flags --follow (default) and --no-follow to decide whether to follow symbolic links in the BASE/_data directory.<br />
+						      Extended the casesensitive flag to the other tags as well.<br />
+						      Fixed a bug that caused the script to terminate when the BASE directory had a space in its path.<br />
+						      Added the $SECONDS variable to log the amount of time taken to songanize.<br />
+						      Updated the copyright notices, keeping in view the impending assignment of copyright to Free Software Foundation, Inc.<br />
+						      
 <tr><td align="center">0.8</td><td>2005-11-05</td><td>Changed the virtual directory structure creation algorithm. The structure for every option passed to songanizer is first created in a temporary directory. On completion of this heavy task, in a short operation, the structure is moved to its desired location.<br />
 						      Added the --all switch.<br />
 						      Changed the --initial switch to --initials.<br />
@@ -262,7 +273,7 @@ the graphics that appear on it. The listening GNU is a GPL'ed image provided by
 Nevrax Limited. The software described in this text has its own copyright notice
 and license, which can be found in the distribution itself.
 </p><p>
-Copyright (C) 2005 Debarshi Ray
+Copyright (C) 2005-2006 Debarshi Ray
 </p><p>
 Verbatim copying and distribution of this entire article are
 permitted worldwide, without royalty, in any medium, provided this
@@ -270,7 +281,7 @@ notice, and the copyright notice, are preserved.
 </p>
 
 <p>
-Updated on $Date: 2006/01/07 15:18:49 $ by $Author: pazzo $.
+Updated on $Date: 2006/07/10 13:04:36 $ by $Author: debarshiray $.
 </p>
 
 </div>
