@@ -72,34 +72,11 @@
 </h3>
 
 <p>
-<table border="1" cellspacing="0" cellpadding="2">
-<tr><td>Version</td><td align="center">Date</td><td align="center">Comments</td></tr>
-<tr><td align="center">1.0</td><td>held back</td><td>Added Autoconf/Automake support.<br />
-                                                      The documentation was given a revamp. A lot of redundancies were resolved in the process.<br />
-                                                      Fixed a bug caused by the mv command's inability to overwrite pre-existing tag directories.<br />
-						      Changed the symbolic links from being absolute to relative.<br />
-                                                      Changed the --initials switch back to --initial.<br />
-                                                      Enhanced the error handling and reporting facilities.<br />
-                                                      Added the flags --follow (default) and --no-follow to decide whether to follow symbolic links in the BASE/_data directory.<br />
-						      Extended the casesensitive flag to the other tags as well.<br />
-						      Fixed a bug that caused the script to terminate when the BASE directory had a space in its path.<br />
-						      Added the $SECONDS variable to log the amount of time taken to songanize.<br />
-						      Updated the copyright notices, keeping in view the impending assignment of copyright to Free Software Foundation, Inc.<br /></td></tr>						      
-<tr><td align="center">0.8</td><td>2005-11-05</td><td>Changed the virtual directory structure creation algorithm. The structure for every option passed to songanizer is first created in a temporary directory. On completion of this heavy task, in a short operation, the structure is moved to its desired location.<br />
-						      Added the --all switch.<br />
-						      Changed the --initial switch to --initials.<br />
-						      Replaced ls with find. Data directories can have multiple levels of subdirectoies within them.<br />
-						      Now links point to individual files instead of directories.<br />
-						      Created an online manual page.</td></tr>
-<tr><td align="center">0.7</td><td>2004-02-01</td><td>gettext support for i18n was added.</td></tr>
-<tr><td align="center">0.6</td><td>2004-01-24</td><td>Added long options support.</td></tr>
-<tr><td align="center">0.5</td><td>2003-08-22</td><td>Fixed problems caused by an album occurring in more than one data directory.</td></tr>
-<tr><td align="center">0.4</td><td>2003-08-17</td><td>Added support for multiple data directories.</td></tr>
-<tr><td align="center">0.3</td><td>2003-07-16</td><td>Initial build.<br />
-						      Translated all texts into english.</td></tr>
-<tr><td align="center">0.2</td><td>2002-12-10</td><td>Created generic function organizeOnBaseOfTag().</td></tr>
-<tr><td align="center">0.1</td><td>2002-11-01</td><td>Started the project.</td></tr>
-</table>
+  The latest stable release is version 0.8. The tarball is available <a href="ftp://ftp.gnu.org/gnu/songanizer/v0.8/songanizer-0.8.tar.gz">here</a>.
+</p><p>
+  The latest pre-release is version 1.0 (alpha). It is available as <a href="ftp://alpha.gnu.org/gnu/songanizer/v1.0/songanizer-1.0alpha.tar.gz">tar.gz</a> and <a href="ftp://alpha.gnu.org/gnu/songanizer/v1.0/songanizer-1.0alpha.tar.bz2">tar.bz2</a>.
+</p><p>
+  For detailed information about the progress in development see the <a href="ChangeLog">ChangeLog</a>.
 </p>
 
 <h3>
@@ -274,7 +251,7 @@ the graphics that appear on it. The listening GNU is a GPL'ed image provided by
 Nevrax Limited. The software described in this text has its own copyright notice
 and license, which can be found in the distribution itself.
 </p><p>
-Copyright (C) 2005-2006 Debarshi Ray
+Copyright (C) 2005, 2006, 2007 Debarshi Ray
 </p><p>
 Verbatim copying and distribution of this entire article are
 permitted worldwide, without royalty, in any medium, provided this
@@ -282,7 +259,7 @@ notice, and the copyright notice, are preserved.
 </p>
 
 <p>
-Updated on $Date: 2007/03/23 23:33:02 $ by $Author: debarshiray $.
+Updated on $Date: 2007/03/23 23:52:31 $ by $Author: debarshiray $.
 </p>
 
 </div>
