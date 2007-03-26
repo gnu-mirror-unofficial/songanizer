@@ -1,3 +1,10 @@
+Version: 1.0    Date: 2007-03-26        Debarshi Ray
+	* Updating version to 1.0 to prepare for impending release.
+
+Version: 1.0    Date: 2007-03-22        Debarshi Ray
+	* Songanizer can now handle files having multiple different values of
+	the same tag field. The first value is considered.
+
 Version: 1.0    Date: 2007-03-22        Debarshi Ray
 	* Added songanizer to dist_bin_SCRIPTS in bin/Makefile.am.
 	* Formatting changes to Makefile.am.
